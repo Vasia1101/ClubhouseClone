@@ -1,31 +1,26 @@
-import Head from 'next/head';
-
+import { useState } from 'react';
+import Layout from '../components/Layout';
 import Button from '../components/Button';
-import styles from '../styles/Home.module.scss';
+import { WellComeStep } from '../components/Steps/WelcomeStep';
+import { EnterNameStep } from '../components/Steps/EnterNameStep';
+import { SocialMediaStep } from '../components/Steps/SocialMediaStep';
 
-export default function Home() {
+const stepsComponents = {
+  0: WellComeStep,
+  1: EnterNameStep,
+  2: SocialMediaStep,
+};
+
+const Index = () => {
+  const [step, setStep] = useState(2);
+  const Step = stepsComponents[step];
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>WebRts_Pet_Project</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1>Welcome</h1>
-        <div>Block hi</div>
-        <Button onClick={() => {}} text="Test" />
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+    <>
+      <div>
+        <Step />
+      </div>
+    </>
   );
-}
+};
+
+export default Index;
