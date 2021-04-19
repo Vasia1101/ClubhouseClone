@@ -1,4 +1,6 @@
 import Head from 'next/head'
+
+import Button from '../components/Button';
 import styles from '../styles/Home.module.scss'
 
 export default function Home() {
@@ -12,7 +14,10 @@ export default function Home() {
       <main className={styles.main}>
         <h1>Welcome</h1>
         <div>Block hi</div>
-        <button>Next</button>
+        <Button 
+          onClick={() => {}} 
+          text='Test' 
+        />
       </main>
 
       <footer className={styles.footer}>
