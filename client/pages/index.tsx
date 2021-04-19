@@ -1,7 +1,7 @@
-import Head from 'next/head'
+import Head from 'next/head';
 
 import Button from '../components/Button';
-import styles from '../styles/Home.module.scss'
+import styles from '../styles/Home.module.scss';
 
 export default function Home() {
   return (
@@ -14,10 +14,7 @@ export default function Home() {
       <main className={styles.main}>
         <h1>Welcome</h1>
         <div>Block hi</div>
-        <Button 
-          onClick={() => {}} 
-          text='Test' 
-        />
+        <Button onClick={() => {}} text="Test" />
       </main>
 
       <footer className={styles.footer}>
@@ -26,10 +23,9 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
+          Powered by <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
         </a>
       </footer>
     </div>
-  )
+  );
 }
